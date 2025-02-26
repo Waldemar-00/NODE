@@ -1,9 +1,10 @@
 //! You can next:
-//* Read files
 //* Create files
+//* Read files
 //* Update files
-//* Delete files
 //* Rename files
+//* Delete files
+
 const http = require( 'http' )
 const fs = require( 'fs' )
 

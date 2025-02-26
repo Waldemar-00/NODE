@@ -6,8 +6,14 @@ const server = createServer( ( request, response ) =>
 {
     //  response.statusCode = 200
     //  response.setHeader( 'Content-Type', 'text/html' )
-    const parseUrl = url.parse( request.url, true ).query
-    console.log( parseUrl.q )
+    const urlParsed = url.parse( request.url, true )
+    console.log( urlParsed )
+    console.log( urlParsed.pathname )
+    console.log( urlParsed.host )
+    console.log( urlParsed.port )
+    console.log( urlParsed.protocol )
+    console.log( urlParsed.query )
+
     response.writeHead( 200, { 'Content-Type': 'text/html' } )
     response.write( `<h1> <pre> Hello world!!!\n URL: ${ request.url }\n Method: ${ request.method }\n URL: ${request.url }\n Headers: ${ request.headers } \n ${ time.getTime() } </pre></h1>` )
     //  response.end( `<h1> Hello world!!!\n URL: ${ request.url }\n Method: ${ request.method }\n Headers: ${ request.headers } \n ${ time.getTime() } </h1>` )
