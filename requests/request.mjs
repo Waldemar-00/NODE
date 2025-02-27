@@ -35,6 +35,8 @@ http.createServer( ( req, res ) =>
         {
             res.writeHead( 200, { "Content-type": "text/html" } )
             res.write( page )
+            const readStream = fs.createReadStream( `./requests${ parsedURL.pathname }.html` )
+            readStream.on('open', () => console.log( `Path ${ parsedURL.pathname } was opened`))
             res.end()
         }
 
