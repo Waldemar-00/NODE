@@ -8,7 +8,6 @@ function toThreads ( amount  )
     {
         array.unshift( i )
     }
-    console.log( array, "ARRAY", amount )
     return array
 }
 

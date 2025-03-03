@@ -15,4 +15,6 @@ worker.on( 'error', ( err ) =>
 worker.on( 'exit', ( code ) =>
 {
     console.log( code )
-})
+} )
+
+console.log('Do something else!')
